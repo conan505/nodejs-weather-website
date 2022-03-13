@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to find location for weather data!", undefined);
         }
         else {
-            callback(undefined, "Weather is " + body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees celcius. There is " + body.current.precip + "% chance of rain.");
+            callback(undefined, "Weather is " + body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. It feels like " + body.current.feelslike + " degrees out. The humidity is  " + body.current.humidity + "%.");
         }
     })
 }
